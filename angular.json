@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "age-of-empires"
+    }
+  },
+  "defaultProject": "age-of-empires",
+  "cli": {
+    "analytics": false
+  }
 }

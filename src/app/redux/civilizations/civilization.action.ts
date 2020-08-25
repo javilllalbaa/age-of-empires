@@ -9,3 +9,8 @@ export const responseData = createAction(
     'RESPONSE_DATA',
     props<{ payload: CivilizationModel[] }>()
 );
+
+export const resquestDataUpdate = createAction(
+    'RESPONSE_DATA_UPDATE',
+    props<{ payload: CivilizationModel }>()
+);

@@ -7,5 +7,6 @@ export interface CivilizationModel {
     unique_tech: string[],
     team_bonus: string,
     civilization_bonus: string[]
+    status: false
 }
 

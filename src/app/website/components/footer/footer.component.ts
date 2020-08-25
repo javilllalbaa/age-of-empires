@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { sendFormService } from './../../../core/services/sendForm.services'
 
 @Component({
   selector: 'app-footer',
@@ -8,11 +9,12 @@ import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms'
 })
 export class FooterComponent implements OnInit {
 
-  statusForm: boolean = false
+  statusForm: boolean = true
   form: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private sendFormService: sendFormService
   ) { 
     this.buildForm();
   }
@@ -32,9 +34,13 @@ export class FooterComponent implements OnInit {
 
   save(event: Event) {
     event.preventDefault();
-    debugger
-    const value = this.form.value;
-    console.log(value);
+    if(this.form.valid){
+      this.sendFormService.send(this.form.value)
+      .subscribe(response => {
+        alert("Comentario Guardado");
+        this.statusForm = true
+      });
+    }
   }
 
   get nameField() {
@@ -51,7 +57,7 @@ export class FooterComponent implements OnInit {
   }
 
   changeBtn() {
-    this.statusForm = false
+    this.statusForm = !this.statusForm
   }
 
 }

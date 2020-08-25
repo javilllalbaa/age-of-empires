@@ -10,21 +10,18 @@ export class CivilizationEffects {
 
     constructor(
         private actions$: Actions,
-        private CivilizationService: CivilizationService
+        private civilizationService: CivilizationService
     ) {}
  
     CivilizationsEfect$ = createEffect(() => {
         return this.actions$.pipe(
             ofType(resquestData),
-            switchMap(() => this.CivilizationService.getAllCivilizations()
+            switchMap(() => this.civilizationService.getAllCivilizations()
             .pipe(
                 mergeMap((payload) => [
                     responseData({ payload })
                   ])
             ))
-            // switchMap(() => this.productService.getJSON().pipe(
-            //     map((payload)=> responseData({ payload }))
-            // ))
         )   
     });
 }

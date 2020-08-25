@@ -1,28 +1,20 @@
-# AgeOfEmpires
+# ADVANCED ANGULAR JS - age-of-empires
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+<p align="center"><img src="./screenshot/image_1.png" width="800"></p>
+<p align="center"><img src="./screenshot/image_2.png" width="800"></p>
+<p align="center"><img src="./screenshot/image_3.png" width="800"></p>
 
-## Development server
+## age-of-empires
+	  
+Please read instruction (to deploy backend and frontend with now)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    > Install NodeJs First
 
-## Code scaffolding
+    > Then install  now with following command
+      # npm i 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    > Finally run the following command 
 
-## Build
+      # ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# age-of-empires
